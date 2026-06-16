@@ -1,0 +1,10 @@
+model_type: "burstprop"
+
+#p_baseline: 0.5
+#error_scale: 1.0
+
+p_baseline: 0.5
+error_scale: 0.5
+
+#p_baseline: 0.5
+#error_scale: 0.005

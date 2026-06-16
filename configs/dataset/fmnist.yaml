@@ -1,0 +1,11 @@
+dataset_name: "fmnist"
+root: "./data"
+use_validation: True
+
+num_workers: 0
+pin_memory: True
+prefetch_factor: None
+
+standardise_inputs: True
+
+task_type: "classification"

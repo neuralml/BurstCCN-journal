@@ -1,0 +1,26 @@
+defaults:
+  - base_mnist_burstccn
+  - _self_
+
+store_exc_inh_branch_state: False
+forward_noise: 0.4
+n_apical_branches: [10, 10, 10, 10]
+
+W:
+   mode: "random_init"
+   scale: 3.6
+   optimiser: null
+
+Y:
+  mode: "random_init"
+  scale: 1.0
+  grad_type: "apic"
+  optimiser:
+    type: sgd
+    lr: 0.04
+    momentum: 0.0
+    weight_decay: 0.0
+
+Q:
+  mode: "random_init"
+  scale: 1.0

@@ -1,0 +1,5 @@
+defaults:
+  - model: cifar10_burstccn_fa
+  - dataset: cifar10
+  - training: cifar10
+  - _self_

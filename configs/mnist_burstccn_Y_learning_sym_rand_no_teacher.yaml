@@ -1,0 +1,6 @@
+defaults:
+  - model: mnist_burstccn_Y_learning_sym_rand_no_teacher
+  - dataset: mnist
+  - training: Y_learning
+#  - training/triggers/branch_activity_tracker@training.triggers.branch_activity_tracker
+  - _self_

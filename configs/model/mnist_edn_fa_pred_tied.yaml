@@ -1,0 +1,6 @@
+defaults:
+  - base_mnist_edn
+  - base_mnist_edn_pred_tied
+  - base_edn_fb_sym
+  - base_random_Y
+  - _self_

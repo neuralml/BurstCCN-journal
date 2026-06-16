@@ -1,0 +1,31 @@
+defaults:
+  - model: mnist_burstccn_fa_Y_learning
+  - dataset: mnist
+  - training: base
+#  - training/triggers/activity_tracker@training.triggers.activity_tracker
+  - training/triggers/feedback_learning@training.triggers.feedback_learning
+  - _self_
+
+model:
+  forward_noise: 0.1
+
+#training:
+#  triggers:
+#    # activity_tracker:
+#    #   _target_: burstccn.triggers.ActivityTracker
+#    #   activity_types: ["e", "b_t", "targets", "inputs"]
+#    #   end_epochs: [0, 30, "${eval:${....n_epochs}-1}"]
+#    #   record_without_teacher: False
+#    feedback_learning:
+#      _target_: burstccn.triggers.BurstCCNFeedbackOnlyLearningTrigger
+#      mode: batch_block_training
+#      block_pretrain_epochs: 0
+#      block_training_batches: 781
+#      prevent_standard_feedback_update: false
+#      forward_noise: 0.1
+#
+#    # weight_noise:
+#    #   _target_: burstccn.triggers.WeightNoiseTrigger
+#    #   trigger_epoch: 0
+#    #   weight_type: Y_weight
+#    #   noise_std: 0.01

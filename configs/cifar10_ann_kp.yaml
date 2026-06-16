@@ -1,0 +1,18 @@
+defaults:
+  - model: cifar10_ann_fa
+  - dataset: cifar10
+  - training: cifar10
+  - _self_
+
+
+model:
+  Y:
+    mode: 'random_init'
+    # mode: 'tied_W'
+    # mode: 'sym_W'
+    scale: 1.0
+    optimiser: ${model.W.optimiser}
+      # type: sgd
+      # lr: ${model.W.optimiser.lr}
+      # momentum: ${model.W.optimiser.momentum}
+      # weight_decay: ${model.W.optimiser.weight_decay}

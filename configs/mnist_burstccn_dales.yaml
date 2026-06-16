@@ -1,0 +1,60 @@
+defaults:
+  - model: mnist_burstccn_dales
+  - dataset: mnist
+  - training: base
+  - _self_
+
+#model:
+#  Y:
+#    mode: "tied_W"
+#    scale: 1.0
+#
+#  Q:
+#    mode: "tied_Y"
+#    scale: 1.0
+
+#model:
+#  n_hidden_units:
+#    - 200
+#    - 100
+#    - 50
+#    - 20
+#  feedback_bottleneck_sizes:
+#    - 100
+#    - 50
+#    - 20
+#    - 10
+
+#training:
+#  triggers:
+#    freeze_w_direct_weight_last:
+#      _target_: burstccn.triggers.WeightFreezeTrigger
+#      trigger_epoch: 5
+#      weight_type: W_direct_weight
+#      layer_index: ${eval:"int(${model.n_hidden_layers})"}
+#    freeze_w_from_pv_weight_last:
+#      _target_: burstccn.triggers.WeightFreezeTrigger
+#      trigger_epoch: 5
+#      weight_type: W_from_PV_weight
+#      layer_index: ${eval:"int(${model.n_hidden_layers})"}
+#    freeze_w_direct_weight_penultimate:
+#      _target_: burstccn.triggers.WeightFreezeTrigger
+#      trigger_epoch: 2
+#      weight_type: W_direct_weight
+#      layer_index: ${eval:"int(${model.n_hidden_layers} - 1)"}
+#    freeze_w_from_pv_weight_penultimate:
+#      _target_: burstccn.triggers.WeightFreezeTrigger
+#      trigger_epoch: 2
+#      weight_type: W_from_PV_weight
+#      layer_index: ${eval:"int(${model.n_hidden_layers}) - 1"}
+
+#training:
+#  triggers:
+#    activity_tracker:
+#      _target_: burstccn.triggers.ActivityTracker
+#      activity_types:
+#        - sst
+#        - vip
+#      end_epochs:
+#        - 0
+#        - 1

@@ -1,0 +1,5 @@
+defaults:
+  - base_burstccn
+  - _self_
+
+model_type: "burstccn_dales"

@@ -1,0 +1,13 @@
+defaults:
+  - model: mnist_edn_fa
+  - dataset: mnist
+  - training: base
+  - _self_
+
+training:
+  triggers:
+    weight_noise:
+      _target_: burstccn.triggers.WeightNoiseTrigger
+      trigger_epoch: 0
+      weight_type: intn_pyr_weight
+      noise_std: 0.005

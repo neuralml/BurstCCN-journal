@@ -1,0 +1,42 @@
+defaults:
+  - base
+  - _self_
+
+in_shape: [224, 224]
+n_outputs: 1000
+
+#in_channels: [3, 64, 128]
+#out_channels: [64, 128, 256]
+##next_channels: [128, 256, 1480]
+#kernel_sizes: [5, 5, 3]
+##next_kernel_sizes: [5, 3]
+#strides: [2, 2, 1]
+##next_strides: [2, 1]
+
+in_channels: [3, 48, 96, 96, 192, 192, 384]
+out_channels: [48, 96, 96, 192, 192, 384, 470]
+kernel_sizes: [9, 3, 5, 3, 3, 3, 3]
+strides: [4, 2, 1, 2, 1, 2, 1]
+
+paddings: [0, 0, 0, 0, 0, 0, 0]
+dilations: [1, 1, 1, 1, 1, 1, 1]
+groups: [1, 1, 1, 1, 1, 1, 1]
+
+n_hidden_layers: 1
+n_hidden_units: 1500
+
+W:
+  mode: "random_init"
+  scale: 3.6
+  optimiser:
+    type: sgd
+#    lr: 0.15
+    lr: 0.008
+    momentum: 0.9
+    weight_decay: 5e-5
+#    weight_decay: 2e-5
+#    weight_decay: 0.0
+
+    lr_scheduler:
+      type: cosine_warmup
+      warmup_epochs: 5

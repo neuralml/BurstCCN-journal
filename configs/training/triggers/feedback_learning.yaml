@@ -1,0 +1,7 @@
+#feedback_learning:
+_target_: burstccn.triggers.BurstCCNFeedbackOnlyLearningTrigger
+mode: batch_block_training
+block_pretrain_epochs: 0
+block_training_batches: 781
+prevent_standard_feedback_update: false
+forward_noise: 0.1

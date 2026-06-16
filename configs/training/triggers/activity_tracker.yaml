@@ -1,0 +1,13 @@
+#activity_tracker:
+#_target_: burstccn.triggers.ActivityTracker
+#activity_types: ['Q_input_branch', 'Y_input_branch',
+#                 'Y_exc_input_branch', 'Y_inh_input_branch',
+#                 'Q_exc_input_branch', 'Q_inh_input_branch',
+#                 'apic_branch']
+#end_epochs: [0, 100]
+#select_examples: 128
+
+_target_: burstccn.triggers.ActivityTracker
+activity_types: ["e", "b_t", "targets", "inputs"]
+end_epochs: [0, 30, "${eval:${....n_epochs}-1}"]
+record_without_teacher: False

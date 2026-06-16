@@ -1,0 +1,8 @@
+defaults:
+  - model: mnist_burstccn_fa_Y_learning
+  - dataset: mnist
+  - training: base
+  - _self_
+
+model:
+  forward_noise: 0.1

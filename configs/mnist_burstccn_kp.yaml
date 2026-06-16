@@ -1,0 +1,49 @@
+defaults:
+  - model: mnist_burstccn_fa
+  - dataset: mnist
+  - training: base
+  - _self_
+
+
+model:
+#  W:
+#    optimiser:
+#      weight_decay: 1e-4
+  Y:
+#    mode: 'random_init'
+    mode: 'sym_W'
+    grad_type: "kp"
+    optimiser:
+      type: sgd
+      lr: ${eval:${model.W.optimiser.lr} / 50.0}
+#      lr: ${model.W.optimiser.lr}
+#      momentum: ${model.W.optimiser.momentum}
+      momentum: 0.98
+      weight_decay: ${model.W.optimiser.weight_decay}
+#      weight_decay: ${eval:${model.W.optimiser.weight_decay} / 10.0}
+#      weight_decay: 0.0
+
+  Q:
+#    mode: 'sym_W'
+    mode: 'sym_Y'
+    grad_type: "kp"
+    optimiser:
+      type: sgd
+      lr: ${eval:${model.W.optimiser.lr} / 50.0}
+#      lr: ${model.W.optimiser.lr}
+#      momentum: ${model.W.optimiser.momentum}
+      momentum: 0.98
+      weight_decay: ${model.W.optimiser.weight_decay}
+#      weight_decay: ${eval:${model.W.optimiser.weight_decay} / 10.0}
+
+
+#training:
+#  triggers:
+#    weight_realignment:
+#      _target_: burstccn.triggers.WeightRealignmentTrigger
+#    weight_noise:
+#      _target_: burstccn.triggers.WeightNoiseTrigger
+#      trigger_epoch: 0
+#      weight_type: Y_weight
+#      noise_std: 0.005
+

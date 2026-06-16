@@ -1,0 +1,5 @@
+Y:
+  mode: "random_init"
+#  scale: 0.35
+#  scale: 0.20
+  scale: 1.5

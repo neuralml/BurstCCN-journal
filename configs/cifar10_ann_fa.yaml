@@ -1,0 +1,5 @@
+defaults:
+  - model: cifar10_ann_fa
+  - dataset: cifar10
+  - training: cifar10
+  - _self_

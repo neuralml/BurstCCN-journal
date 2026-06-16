@@ -1,0 +1,6 @@
+defaults:
+  - base_imagenet
+  - base_ann
+  - _self_
+
+model_name: "imagenet_conv_ann"

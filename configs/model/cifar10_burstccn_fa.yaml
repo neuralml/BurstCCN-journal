@@ -1,0 +1,8 @@
+defaults:
+  - base_cifar10_burstccn
+  - base_burstccn_fa
+  - _self_
+
+
+Y:
+  scale: 1.0

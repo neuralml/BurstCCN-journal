@@ -1,0 +1,31 @@
+defaults:
+  - model: cifar10_burstccn_fa
+  - dataset: cifar10
+  - training: cifar10
+  - _self_
+
+
+
+model:
+  Y:
+    mode: 'random_init'
+    scale: 1.0
+    grad_type: "kp"
+    optimiser:
+      type: sgd
+      lr: 0.001
+      momentum: ${model.W.optimiser.momentum}
+      weight_decay: ${model.W.optimiser.weight_decay}
+      lr_scheduler: ${model.W.optimiser.lr_scheduler}
+
+  Q:
+    # mode: 'tied_Y'
+    mode: 'sym_Y'
+    scale: 1.0
+    grad_type: "kp"
+    optimiser:
+      type: sgd
+      lr: 0.001
+      momentum: ${model.W.optimiser.momentum}
+      weight_decay: ${model.W.optimiser.weight_decay}
+      lr_scheduler: ${model.W.optimiser.lr_scheduler}

@@ -1,0 +1,15 @@
+dataset_name: "imagenet_web"
+root: 'E:/imagenet/webdataset'
+use_validation: False
+
+num_workers: 8
+prefetch_factor : 2
+pin_memory: True
+
+#num_workers: 0
+#prefetch_factor: None
+#pin_memory: True
+
+#standardise_inputs: True
+
+task_type: "classification"

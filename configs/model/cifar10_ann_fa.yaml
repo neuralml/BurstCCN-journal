@@ -1,0 +1,8 @@
+defaults:
+  - base_cifar10_ann
+  - base_random_Y
+  - _self_
+
+
+Y:
+  scale: 1.0

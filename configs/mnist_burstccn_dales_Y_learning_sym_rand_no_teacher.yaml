@@ -1,0 +1,5 @@
+defaults:
+  - model: mnist_burstccn_dales_Y_learning_sym_rand_no_teacher
+  - dataset: mnist
+  - training: base
+  - _self_

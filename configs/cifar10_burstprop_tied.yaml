@@ -1,0 +1,5 @@
+defaults:
+  - model: cifar10_burstprop_tied
+  - dataset: cifar10
+  - training: cifar10
+  - _self_

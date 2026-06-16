@@ -1,0 +1,13 @@
+defaults:
+  - base_cifar10
+  - base_burstccn
+  - _self_
+
+#local_feedback_scales: [1.0, 1.0, 1.0, 1.0]
+
+output_activity_shift: 1.0
+error_scale: 0.1
+local_feedback_scales: [1.0, 1.0, 1.0, 10.0]
+
+
+model_name: "cifar10_conv_burstccn"

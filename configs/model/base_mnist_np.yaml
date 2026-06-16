@@ -1,0 +1,16 @@
+defaults:
+  - base_mnist
+  - base_np
+  - base_tied_Y
+  - _self_
+
+model_name: "mnist_np"
+
+W:
+  mode: "random_init"
+  scale: 3.6
+  optimiser:
+    type: sgd
+    lr: 0.01
+    momentum: 0.0
+    weight_decay: 1e-5

@@ -1,0 +1,7 @@
+model_type: "burstccn"
+
+p_baseline: 0.5
+error_scale: 0.5
+
+store_exc_inh_branch_state: False
+apical_bias_learning: False

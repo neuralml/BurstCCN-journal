@@ -1,0 +1,36 @@
+defaults:
+  - base
+  - _self_
+
+n_inputs: 1
+n_outputs: 1
+
+n_hidden_layers: 1
+n_hidden_units: 1
+
+#n_hidden_layers: 2
+#n_hidden_units: 10
+
+W:
+  mode: "load_init"
+  load_file: "simple_increasing_task_base.pt"
+  scale: null
+#  mode: "random_init"
+#  scale: 1.0
+  optimiser:
+    type: sgd
+#    lr: 0.5
+    lr: 1.0
+    momentum: 0.0
+    weight_decay: 0.0
+
+#    fixed_layers:
+#      - 1
+
+Y:
+  mode: "sym_W"
+  scale: 1.0
+
+Q:
+  mode: "sym_Y"
+  scale: 1.0

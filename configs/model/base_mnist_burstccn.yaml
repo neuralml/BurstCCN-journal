@@ -1,0 +1,6 @@
+defaults:
+  - base_mnist
+  - base_burstccn
+  - _self_
+
+model_name: "mnist_burstccn"

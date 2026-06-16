@@ -1,0 +1,6 @@
+defaults:
+  - base_simple_increasing_task
+  - base_burstccn_dales
+  - _self_
+
+model_name: "simple_increasing_task_burstccn_dales"

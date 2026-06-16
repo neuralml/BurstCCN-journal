@@ -1,0 +1,4 @@
+_target_: burstccn.triggers.ActivityTracker
+activity_types: [sst, vip, e, b_t, p_t, delta_bp, delta_fa, delta, targets]
+end_epochs: [0, 1, 5, "${eval:${....n_epochs}-1}"]
+record_without_teacher: True

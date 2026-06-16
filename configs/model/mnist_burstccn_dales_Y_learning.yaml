@@ -1,0 +1,21 @@
+defaults:
+  - base_mnist_burstccn
+  - base_burstccn_fa
+  - _self_
+
+model_name: "mnist_burstccn_dales"
+model_type: "burstccn_dales"
+
+feedback_bottleneck_sizes:
+  - 500
+  - 500
+  - 500
+  - 10
+
+Y:
+  grad_type: "apic"
+  optimiser:
+    type: sgd
+    lr: 0.001
+    momentum: 0.0
+    weight_decay: 0.0

@@ -1,0 +1,16 @@
+defaults:
+  - model: mnist_burstccn_dales_Y_learning
+  - dataset: mnist
+  - training: base
+  - _self_
+
+#training:
+#  triggers:
+#    activity_tracker:
+#      _target_: burstccn.triggers.ActivityTracker
+#      activity_types:
+#        - sst
+#        - vip
+#      end_epochs:
+#        - 0
+#        - 1

@@ -1,0 +1,6 @@
+defaults:
+  - base_mnist
+  - base_ann
+  - _self_
+
+model_name: "mnist_ann"

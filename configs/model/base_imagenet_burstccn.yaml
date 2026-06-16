@@ -1,0 +1,31 @@
+defaults:
+  - base_imagenet
+  - base_burstccn
+  - _self_
+
+#local_feedback_scales: [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 0.5]
+#local_feedback_scales: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 100.0, 0.1]
+#local_feedback_scales: [1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 0.5]
+#local_feedback_scales: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+# local_feedback_scales: [1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7, 500.0]
+local_feedback_scales: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 500.0]
+output_activity_shift: 1.0
+error_scale: 0.001
+
+Y:
+  mode: 'random_init'
+#  mode: 'sym_W'
+#  optimiser: ${model.W.optimiser}
+
+Q:
+  mode: 'tied_Y'
+#  optimiser: ${model.W.optimiser}
+
+#      type: sgd
+#      lr: ${eval:${model.W.optimiser.lr}}
+#      momentum: ${model.W.optimiser.momentum}
+#      weight_decay: ${model.W.optimiser.weight_decay}
+#      lr_scheduler: ${model.W.optimiser.lr_scheduler} # {'type': 'cosine_warmup', 'warmup_epochs': 5}
+
+model_name: "imagenet_conv_burstccn"

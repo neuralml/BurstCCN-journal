@@ -1,0 +1,5 @@
+defaults:
+  - mnist_burstccn_tied
+  - _self_
+
+forward_noise: 0.1

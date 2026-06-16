@@ -1,0 +1,7 @@
+.idea
+data/*
+wandb/*
+*.svg
+__pycache__
+/continuous_burstccn/training_runs
+/plotting/analysis/wandb_run_data/

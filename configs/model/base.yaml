@@ -1,0 +1,7 @@
+loss_type: "mse"
+hidden_activation_function: "sigmoid"
+output_activation_function: "sigmoid"
+
+use_teacher: True
+
+dtype: float32

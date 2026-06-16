@@ -1,0 +1,5 @@
+defaults:
+  - model: mnist_burstccn_fa
+  - dataset: mnist
+  - training: base
+  - _self_

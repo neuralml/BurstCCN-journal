@@ -1,0 +1,6 @@
+defaults:
+  - base_cifar10
+  - base_ann
+  - _self_
+
+model_name: "cifar10_conv_ann"

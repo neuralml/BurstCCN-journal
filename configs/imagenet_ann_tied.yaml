@@ -1,0 +1,5 @@
+defaults:
+  - model: imagenet_ann_tied
+  - dataset: imagenet
+  - training: imagenet
+  - _self_

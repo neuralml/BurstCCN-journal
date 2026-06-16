@@ -1,0 +1,5 @@
+defaults:
+  - model: mnist_edn_tied
+  - dataset: mnist
+  - training: base
+  - _self_

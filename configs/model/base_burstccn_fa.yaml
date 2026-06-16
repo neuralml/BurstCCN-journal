@@ -1,0 +1,7 @@
+defaults:
+  - base_random_Y
+  - _self_
+
+Q:
+  mode: "sym_Y"
+  scale: 1.0

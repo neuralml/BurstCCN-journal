@@ -1,0 +1,5 @@
+defaults:
+  - mnist_burstccn_Y_learning_sym_rand
+  - _self_
+
+use_teacher: False

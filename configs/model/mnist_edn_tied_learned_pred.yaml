@@ -1,0 +1,38 @@
+defaults:
+  - base_mnist_edn
+  - base_tied_Y
+  - _self_
+
+#forward_noise: 0.1
+#use_teacher: False
+#lambda_hidden: 0.25
+lambda_output: 0.01
+
+W:
+  mode: "random_init"
+  scale: 3.6
+  optimiser:
+    type: sgd
+    lr: 0.07
+    momentum: 0.0
+#    weight_decay: 1e-5
+    weight_decay: 0.0
+
+pyr_intn:
+  mode: "sym_W"
+#  mode: "tied_W"
+  scale: 1.0
+#  mode: "random_init"
+#  scale: 1.6
+  optimiser:
+    type: sgd
+    lr: 0.2
+#    lr: 0.0
+#    momentum: 0.0
+#    weight_decay: 1e-5
+#    weight_decay: 1e-5
+    weight_decay: 0.0
+
+intn_pyr:
+  mode: "tied_Y"
+  scale: 1.0

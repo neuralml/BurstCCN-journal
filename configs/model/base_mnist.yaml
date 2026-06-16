@@ -1,0 +1,21 @@
+defaults:
+  - base
+  - _self_
+
+n_inputs: 784
+n_outputs: 10
+
+n_hidden_layers: 4
+n_hidden_units: 500
+
+W:
+  mode: "random_init"
+  scale: 3.6
+  optimiser:
+    type: sgd
+    lr: 0.15
+#    lr: 0.8
+    momentum: 0.0
+#    weight_decay: 0.0
+#    weight_decay: 1e-5
+    weight_decay: 5e-5

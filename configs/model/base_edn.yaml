@@ -1,0 +1,8 @@
+model_type: "edn"
+
+#lambda_output: 0.1
+
+lambda_output: 0.01
+lambda_intn: 0.1
+lambda_hidden: 1.0
+

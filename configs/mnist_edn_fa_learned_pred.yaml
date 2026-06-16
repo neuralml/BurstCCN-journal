@@ -1,0 +1,5 @@
+defaults:
+  - model: mnist_edn_fa_learned_pred
+  - dataset: mnist
+  - training: base
+  - _self_

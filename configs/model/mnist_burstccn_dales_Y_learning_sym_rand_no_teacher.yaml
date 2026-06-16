@@ -1,0 +1,28 @@
+defaults:
+  - base_mnist_burstccn
+  - _self_
+
+model_name: "mnist_burstccn_dales"
+model_type: "burstccn_dales"
+
+use_teacher: False
+forward_noise: 0.25
+
+W:
+#  mode: "load_init"
+#  load_file: "ann_tied_1_epoch.pth"
+  optimiser: null
+
+Y:
+  mode: "random_init"
+  scale: 0.03
+  grad_type: "apic"
+  optimiser:
+    type: sgd
+    lr: 0.01
+    momentum: 0.0
+    weight_decay: 0.0
+
+Q:
+  mode: "sym_W"
+  scale: 1.0

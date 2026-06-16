@@ -1,0 +1,8 @@
+dataset_name: "simple_increasing_task"
+use_validation: False
+
+num_workers: 0
+pin_memory: True
+prefetch_factor: None
+
+task_type: "regression"

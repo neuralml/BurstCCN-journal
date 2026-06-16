@@ -1,0 +1,14 @@
+pyr_intn:
+  mode: "sym_W"
+  scale: 1.0
+  optimiser:
+    type: "sgd"
+#    lr: 0.3
+    lr: ${eval:"0.3 + (${model.n_hidden_layers} - 4) * (0.2 - 0.3) / (8 - 4)"}
+    weight_decay: 0.0
+
+W:
+  optimiser:
+#    lr: 0.05
+    lr: ${eval:"0.05 + (${model.n_hidden_layers} - 4) * (0.04 - 0.05) / (8 - 4)"}
+    weight_decay: 0.0

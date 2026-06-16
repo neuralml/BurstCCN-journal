@@ -1,0 +1,31 @@
+seed: 1
+n_epochs: 100
+batch_size: 32
+test_batch_size: 1000
+group: default
+
+log_interval: 200
+require_gpu: True
+
+save_initial_model: False
+
+# triggers:
+#  activity_tracker:
+#    _target_: burstccn.triggers.ActivityTracker
+#    activity_types: ["e", "b_t", "targets", "inputs"]
+#    end_epochs: [0, 30, "${eval:${....n_epochs}-1}"]
+#    record_without_teacher: False
+
+#triggers:
+#  fa_alignment_eval:
+#    _target_: burstccn.triggers.BottleneckVsFullFAAlignmentEvalTrigger
+#    eval_epochs: [0, 1, 5, 10, 50, 100]
+#    max_examples: 20000
+#    use_teacher: True
+#    backward_modes: ["fa"]
+#    delta_state: "delta"
+#    delta_ref_state: "delta_fa"
+#    weight_attr: "W_weight"     # switch to W_direct_weight if needed
+#    grad_attr: "grad"
+#    grad_ref_attr: "grad_fa"
+#    unique_run_name: run_name

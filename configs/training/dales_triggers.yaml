@@ -1,0 +1,10 @@
+defaults:
+  - base
+  - _self_
+
+triggers:
+  sst_positive_negative_tracker:
+    _target_: burstccn.triggers.SstPositiveNegativeTracker
+    start_tracking_epoch: 0
+    end_tracking_epoch: 1
+    layer_index: 1

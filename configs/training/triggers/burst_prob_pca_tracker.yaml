@@ -1,0 +1,10 @@
+_target_: burstccn.triggers.BurstProbPCATracker
+end_epochs: [0, 1, 30, "${eval:${....n_epochs}-1}"]
+burst_prob_state: "p_t"
+max_components: null
+variance_thresholds: [0.8, 0.9, 0.95, 0.99]
+save_raw_burst_probs: True
+save_plots: True
+plot_dpi: 150
+class_conditioned_num_classes: 10
+min_examples_per_class: 2

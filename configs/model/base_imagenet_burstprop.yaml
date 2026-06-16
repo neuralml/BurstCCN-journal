@@ -1,0 +1,24 @@
+defaults:
+  - base_imagenet
+  - base_burstprop
+  - _self_
+
+#local_feedback_scales: [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 0.5]
+#local_feedback_scales: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 100.0, 0.1]
+
+#local_feedback_scales: [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 0.5]
+#local_feedback_scales: [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 0.5]
+#local_feedback_scales: [0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.1, 0.1]
+#local_feedback_scales: [0.5, 0.5, 0.5, 1.2, 1.0, 0.6, 0.6, 0.5]
+#local_feedback_scales: [0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.15, 0.0025]
+#local_feedback_scales: [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 100000]
+#local_feedback_scales: [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 500]
+#local_feedback_scales: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 100]
+local_feedback_scales: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 20]
+
+output_activity_shift: 1.0
+
+model_name: "imagenet_conv_burstprop"
+
+rec:
+  mode: "none"

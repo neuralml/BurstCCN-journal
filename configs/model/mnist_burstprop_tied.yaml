@@ -1,0 +1,4 @@
+defaults:
+  - base_mnist_burstprop
+  - base_tied_Y
+  - _self_

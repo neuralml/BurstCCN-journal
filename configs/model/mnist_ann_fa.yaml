@@ -1,0 +1,4 @@
+defaults:
+  - base_mnist_ann
+  - base_random_Y
+  - _self_

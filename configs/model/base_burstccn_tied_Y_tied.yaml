@@ -1,0 +1,7 @@
+defaults:
+  - base_tied_Y
+  - _self_
+
+Q:
+  mode: "tied_Y"
+  scale: 1.0

@@ -1,0 +1,5 @@
+defaults:
+  - base_cifar10_burstccn
+  - base_tied_Q
+  - base_tied_Y
+  - _self_

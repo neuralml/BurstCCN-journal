@@ -1,0 +1,5 @@
+#Y_weight_noise:
+_target_: burstccn.triggers.WeightNoiseTrigger
+trigger_epoch: 0
+weight_type: Y_weight
+noise_std: 0.01

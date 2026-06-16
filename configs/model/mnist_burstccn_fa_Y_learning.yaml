@@ -1,0 +1,14 @@
+defaults:
+  - base_mnist_burstccn
+  - base_burstccn_fa
+  - _self_
+
+Y:
+  grad_type: "apic"
+  optimiser:
+    type: sgd
+    lr: 0.004
+    momentum: 0.0
+    weight_decay: 0.0
+
+n_apical_branches: ${repeat:10,${model.n_hidden_layers}}

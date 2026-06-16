@@ -1,0 +1,13 @@
+defaults:
+  - base_mnist_edn
+  - base_mnist_edn_pred_tied
+  - base_edn_fb_sym
+  - base_random_Y
+  - _self_
+
+intn_pyr:
+  optimiser:
+    type: sgd
+    lr: 0.001
+    momentum: 0.0
+    weight_decay: 0.0

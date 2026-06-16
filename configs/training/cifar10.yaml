@@ -1,0 +1,7 @@
+defaults:
+  - base
+  - _self_
+
+n_epochs: 400
+
+label_smoothing: 0.05

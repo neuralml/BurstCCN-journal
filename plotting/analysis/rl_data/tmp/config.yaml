@@ -1,0 +1,63 @@
+model:
+  model_type: burstccn
+  n_inputs: 18
+  n_outputs: 4
+  n_hidden_layers: 3
+  n_hidden_units: 64
+  p_baseline: 0.5
+  error_scale: 0.5
+  hidden_activation_function: sigmoid
+  output_activation_function: sigmoid
+  output_bias_init: -1.1
+  use_teacher: true
+  dtype: float32
+  W:
+    mode: random_init
+    scale: 3.0
+    optimiser:
+      type: sgd
+      lr: 0.5
+      momentum: 0.0
+      weight_decay: 1.0e-06
+  'Y':
+    mode: tied_W
+    scale: 1.0
+    optimiser: null
+  Q:
+    mode: tied_Y
+    scale: 1.0
+    optimiser: null
+task:
+  dataset: frozen_lake
+  n_actions: 4
+  map_size: 3
+  rgb: false
+  slippery: false
+  render_mode: rgb_array_list
+  max_steps: 200
+  shuffle_map_frequency: 10
+  offline_maps: true
+  offline_map_count: 50
+  use_map_catalog: true
+  map_catalog_dir: configs/maps
+  test_map_count: 50
+  video_base_path: videos
+  replay_buffer_size: 20000
+  n_tests: 50
+  discount_factor: 0.95
+  epsilon_decay: 50000
+  target_net_update_frequency: 1000
+training:
+  force_gpu: false
+  seed: 1
+  rerun: true
+  terminate_failures: false
+  n_episodes: 60000
+  log_frequency: 100
+  eval_frequency: 100
+  save_model_mode: all
+  batch_size: 128
+  replay_warmup_episodes: 2000
+  train_frequency: 1
+run_name: burstccn
+group: tmp

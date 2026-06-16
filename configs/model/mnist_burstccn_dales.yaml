@@ -1,0 +1,23 @@
+defaults:
+  - base_mnist_burstccn
+  - base_burstccn_fa
+  - _self_
+
+model_name: "mnist_burstccn_dales"
+model_type: "burstccn_dales"
+
+#feedback_bottleneck_sizes:
+#  - 250
+#  - 250
+#  - 250
+#  - 10
+
+feedback_bottleneck_sizes:
+  - ${eval:"int(${model.n_hidden_units})"}
+  - ${eval:"int(${model.n_hidden_units})"}
+  - ${eval:"int(${model.n_hidden_units})"}
+  - 10
+
+#Y:
+#  mode: "sym_W"
+#  scale: 1.0

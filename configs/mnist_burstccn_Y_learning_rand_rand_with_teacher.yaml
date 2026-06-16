@@ -1,0 +1,19 @@
+defaults:
+  - model: mnist_burstccn_Y_learning_rand_rand_with_teacher
+  - dataset: mnist
+  - training: Y_learning
+#  - training/triggers/branch_activity_tracker@training.triggers.branch_activity_tracker
+  - _self_
+
+#training:
+#  triggers:
+#    activity_tracker:
+#      _target_: burstccn.triggers.ActivityTracker
+##      activity_types: ['Q_input', 'Y_input']
+##      activity_types: ['Q_weight', 'Y_weight']
+#      activity_types: ['Q_input_branch', 'Y_input_branch',
+#                       'Y_exc_input_branch', 'Y_inh_input_branch',
+#                       'Q_exc_input_branch', 'Q_inh_input_branch',
+#                       'apic_branch']
+#      end_epochs: [0, 100]
+#      select_examples: 128

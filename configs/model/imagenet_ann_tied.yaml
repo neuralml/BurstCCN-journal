@@ -1,0 +1,4 @@
+defaults:
+  - base_imagenet_ann
+  - base_tied_Y
+  - _self_

@@ -1,0 +1,4 @@
+defaults:
+  - base_imagenet_burstprop
+  - base_tied_Y
+  - _self_

@@ -1,0 +1,6 @@
+_target_: burstccn.triggers.RankTracker
+eval_epochs: [0, 2]
+state_key: "apic"
+bp_state_key: "b_input_bp"
+max_examples: null
+use_teacher: True

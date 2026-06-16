@@ -1,0 +1,4 @@
+defaults:
+  - base_mnist_burstccn
+  - base_burstccn_fa
+  - _self_

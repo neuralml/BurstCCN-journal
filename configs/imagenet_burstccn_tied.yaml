@@ -1,0 +1,5 @@
+defaults:
+  - model: imagenet_burstccn_tied
+  - dataset: imagenet
+  - training: imagenet
+  - _self_

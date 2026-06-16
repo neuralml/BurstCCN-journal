@@ -1,0 +1,82 @@
+defaults:
+  - model: simple_increasing_task_burstccn_dales
+  - dataset: simple_increasing_task
+  - training: base
+  - _self_
+
+dataset:
+  input_value: 2.0
+  target_value: 0.5
+
+model:
+  error_scale:
+    1.0
+
+training:
+  n_epochs: 151
+  batch_size: 1
+  save_initial_model: False
+
+  triggers:
+    weight_override_l0:
+      _target_: burstccn.triggers.WeightOverrideTrigger
+      trigger_epoch: 0
+      weight_type: W_direct_weight
+      layer_index: 0
+      value: 0.4507
+    freeze_w_direct_weight_l1:
+      _target_: burstccn.triggers.WeightFreezeTrigger
+      trigger_epoch: 0
+      weight_type: W_direct_weight
+      layer_index: 1
+    freeze_w_from_pv_weight_l1:
+      _target_: burstccn.triggers.WeightFreezeTrigger
+      trigger_epoch: 0
+      weight_type: W_from_PV_weight
+      layer_index: 1
+    freeze_w_direct_bias_l1:
+      _target_: burstccn.triggers.WeightFreezeTrigger
+      trigger_epoch: 0
+      weight_type: W_direct_bias
+      layer_index: 1
+    freeze_w_direct_bias_l0:
+      _target_: burstccn.triggers.WeightFreezeTrigger
+      trigger_epoch: 0
+      weight_type: W_direct_bias
+      layer_index: 0
+    interneuron_ablation:
+      _target_: burstccn.triggers.InterneuronAblationTrigger
+      ablation_epoch: 1
+#      interneuron_type: "control"
+#      interneuron_type: "pv"
+#      interneuron_type: "vip"
+#      interneuron_type: "sst"
+      interneuron_type: "ndnf"
+      layer_index: 0
+    relative_target_change:
+      _target_: burstccn.triggers.RelativeTargetChangeTrigger
+      target_set_epoch: 0
+      target_change: 0.1
+      clamp_min: 0.0
+      clamp_max: 1.0
+
+#    sst_positive_negative_tracker:
+#      _target_: burstccn.triggers.SstPositiveNegativeTracker
+#      start_tracking_epoch: 250
+#      end_tracking_epoch: 255
+#      layer_index: 0
+
+#  triggers:
+#    simple_increasing_task:
+#      _target_: burstccn.triggers.SimpleIncreasingTaskTrigger
+#      increase_at_epoch: 250
+#      new_target_value: 0.75
+#    activity_tracker:
+#      _target_: burstccn.triggers.ActivityTracker
+#      activity_types:
+#        - sst
+#        - vip
+#      end_epochs:
+#        - 250
+#        - 255
+#        - 400
