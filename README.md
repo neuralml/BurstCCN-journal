@@ -1,6 +1,6 @@
 # Repo for paper: Cell-type-specific cortical feedback coordinates hierarchical credit assignment
 
-A preprint of our paper is available at: https://github.com/neuralml/BurstCCN-journal
+A preprint of our paper is available at https://doi.org/10.64898/2026.06.16.732595
 This repository contains the code to run the BurstCCN model variants used in the paper: discrete-time rate-based BurstCCN, Dalean BurstCCN, continuous-time rate-based BurstCCN, and spiking BurstCCN. It also includes the code used to reproduce the figures.
 
 ## Requirements
