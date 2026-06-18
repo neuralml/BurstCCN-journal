@@ -1,5 +1,7 @@
 # Code for "Cell-type-specific cortical feedback coordinates hierarchical credit assignment"
 
+<img width="610" height="757" alt="burstccn_schematic" src="https://github.com/user-attachments/assets/df8ce294-aa4f-4311-b8f2-e5f5165a9b44" />
+
 A preprint of our paper is available at https://doi.org/10.64898/2026.06.16.732595
 This repository contains the code to run the BurstCCN model variants used in the paper: discrete-time rate-based BurstCCN, Dalean BurstCCN, continuous-time rate-based BurstCCN, and spiking BurstCCN. It also includes the code used to reproduce the figures.
 
